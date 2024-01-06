@@ -17,10 +17,10 @@ const Verify = lazy(() => import("./pages/Verify"));
 // localStorage.setItem("api-url", "https://encnotes.onwebapp.io");
 // localStorage.setItem("api-url", "https://encnotes.domcloud.io");
 // localStorage.setItem("api-url", "http://127.0.0.1:3000")
-let api = localStorage.getItem("api-url", "https://encnotes.andrewru.repl.co");
+let api = localStorage.getItem("api-url");
 if (!api) {
 	console.log("Settings new backend")
-	localStorage.setItem("api-url", "https://encnotes.andrewru.repl.co");
+	localStorage.setItem("api-url", "https://b48775b8-5e10-421a-ba4c-da63eb6153e1-00-jy7rm7twzp5c.asia-b.replit.dev");
 }
 const localTheme = localStorage.getItem("theme");
 if (localTheme) {

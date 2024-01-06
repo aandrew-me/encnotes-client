@@ -44,7 +44,7 @@ function Login() {
 
 	function handleLogin(e) {
 		e.preventDefault();
-		const formEmail = form.current.elements.email.value;
+		const formEmail = form.current.elements.email.value.toLowerCase();
 		const password = form.current.elements.password.value;
 
 		if (formEmail && password) {

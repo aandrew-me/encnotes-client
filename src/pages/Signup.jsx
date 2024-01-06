@@ -21,8 +21,8 @@ function Signup() {
 		setErrorMsg("");
 		setInfo("");
 		e.preventDefault();
-
-		const email = form.current.elements.email.value;
+		
+		const email = form.current.elements.email.value.toLowerCase();
 		const password = form.current.elements.password.value;
 
 		if (email && password) {
@@ -34,7 +34,6 @@ function Signup() {
 				iterations: 10000,
 			}).toString();
 
-			// const masterKey = derivedKey.substring(0, 64);
 			const serverPassword = derivedKey.substring(64, 128);
 
 			const data = {
@@ -42,6 +41,7 @@ function Signup() {
 				password: serverPassword,
 				captcha: token,
 			};
+			console.log(data)
 			axios
 				.post(url + "/api/register", data)
 				.then((response) => {

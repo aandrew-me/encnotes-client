@@ -71,7 +71,7 @@ export default function MenuItem() {
 					leaveFrom="transform opacity-100 scale-100"
 					leaveTo="transform opacity-0 scale-95"
 				>
-					<Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-selected shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+					<Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-700 rounded-md bg-selected shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
 						{/* Theme */}
 						<div className="p-2 flex items-center justify-around">
 							<label>Theme</label>
@@ -84,6 +84,11 @@ export default function MenuItem() {
 								<option value="dark">Dark</option>
 							</select>
 						</div>
+
+						<div className="px-4 py-3">
+							<a href="/settings">Settings</a>
+						</div>
+
 						<div className="px-1 py-1 ">
 							<Menu.Item>
 								{({ active }) => (

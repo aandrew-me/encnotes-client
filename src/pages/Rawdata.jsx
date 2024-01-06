@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function Rawdata() {
 	const url = localStorage.getItem("api-url");
-	const [jsonData, setJsonData] = useState("");
+	const [jsonData, setJsonData] = useState("Loading...");
 
 	useEffect(() => {
 		axios
